@@ -1,0 +1,25 @@
+#
+# Copyright (c) 2026 Nordic Semiconductor
+#
+# SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+#
+
+mainmenu "Finger counter inference application"
+
+config EDGE_IMPULSE_PATH
+	string "Edge Impulse library path"
+	default "finger_counter.zip"
+	help
+	  Local file path of the Edge Impulse deployment archive. Build with
+	  the "Nordic Axon NPU Library" deployment format from Edge Impulse
+	  Studio, place the resulting zip into the application directory,
+	  and rename it (or update this option) to match.
+
+config FINGER_COUNTER_INFERENCE_INTERVAL_MS
+	int "Delay between inferences (ms)"
+	default 200
+	help
+	  Sleep between consecutive inferences. 0 disables the sleep so the
+	  app runs as fast as the camera + Axon allow.
+
+source "Kconfig.zephyr"

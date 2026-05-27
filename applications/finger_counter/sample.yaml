@@ -1,0 +1,17 @@
+sample:
+  description: Live finger-count classification using Edge Impulse on Axon NPU
+  name: finger_counter
+
+common:
+  sysbuild: true
+  build_only: true
+  tags:
+    - ci_build
+    - sysbuild
+
+tests:
+  applications.finger_counter:
+    platform_allow:
+      - nrf54lm20dk/nrf54lm20b/cpuapp
+    integration_platforms:
+      - nrf54lm20dk/nrf54lm20b/cpuapp
