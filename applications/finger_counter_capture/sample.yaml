@@ -1,0 +1,17 @@
+sample:
+  description: Capture Arducam frames over UART for Edge Impulse data collection
+  name: finger_counter_capture
+
+common:
+  sysbuild: true
+  build_only: true
+  tags:
+    - ci_build
+    - sysbuild
+
+tests:
+  applications.finger_counter_capture:
+    platform_allow:
+      - nrf54lm20dk/nrf54lm20b/cpuapp
+    integration_platforms:
+      - nrf54lm20dk/nrf54lm20b/cpuapp
