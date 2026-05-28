@@ -8,7 +8,7 @@ mainmenu "Finger counter inference application"
 
 config EDGE_IMPULSE_PATH
 	string "Edge Impulse library path"
-	default "finger_counter.zip"
+	default "finger_counter_v2.zip"
 	help
 	  Local file path of the Edge Impulse deployment archive. Build with
 	  the "Nordic Axon NPU Library" deployment format from Edge Impulse

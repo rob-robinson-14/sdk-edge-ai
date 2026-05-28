@@ -178,12 +178,12 @@ static void log_camera_stats(void)
 	const uint32_t C  = rgb565_pixel((size_t)(CAM_HEIGHT / 2) * CAM_WIDTH +
 					 (size_t)(CAM_WIDTH / 2));
 
-	LOG_INF("cam: meanRGB=(%u,%u,%u) lum=%u..%u",
-		(unsigned)(sum_r / n), (unsigned)(sum_g / n),
-		(unsigned)(sum_b / n), min_lum, max_lum);
-	LOG_INF("     TL=%06x TR=%06x BL=%06x BR=%06x C=%06x",
-		(unsigned)TL, (unsigned)TR, (unsigned)BL, (unsigned)BR,
-		(unsigned)C);
+	// LOG_INF("cam: meanRGB=(%u,%u,%u) lum=%u..%u",
+	// 	(unsigned)(sum_r / n), (unsigned)(sum_g / n),
+	// 	(unsigned)(sum_b / n), min_lum, max_lum);
+	// LOG_INF("     TL=%06x TR=%06x BL=%06x BR=%06x C=%06x",
+	// 	(unsigned)TL, (unsigned)TR, (unsigned)BL, (unsigned)BR,
+	// 	(unsigned)C);
 }
 
 #if EI_CLASSIFIER_OBJECT_DETECTION == 1
@@ -315,7 +315,7 @@ int main(void)
 	while (true) {
 		err = capture_one_frame_into_buf(video);
 		if (err) {
-			k_sleep(K_MSEC(100));
+			k_sleep(K_MSEC(200));
 			continue;
 		}
 
